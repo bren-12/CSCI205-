@@ -15,10 +15,14 @@ int main()
     }
     cout << endl;
     */
-   int number {2};
-   std::cout << "Enter a number and it will be printed below" << '\n' << '\n'; 
-   std::cin >> number;
-   std::cout << number;
+    int number1 {1};
+    int number2 {2};
+    std::cout << "Enter a number 1" << '\n'; 
+    std::cout << "Enter a number 2" << '\n'; 
+    std::cin >> number1;
+    std::cin >> number2;
+    std::cout << "Number 1 + Number 2 = " << (number1 + number2) << '\n';
+    std::cout << "Number 1 - Number 2 = " << (number1 - number2);
 
-   return 0;
+    return 0;
 }
