@@ -23,5 +23,6 @@ int readNumber()
 void writeAnswer(int num)
 {
     int numFinal = num;
+    std::cerr << "writeAnswerRun\n";
     std::cout << "Your Answer = " << numFinal;
 }

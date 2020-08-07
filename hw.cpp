@@ -33,6 +33,6 @@ int main()
     int numFinal = num1 + num2;
 
     writeAnswer(numFinal);
-    
+
     return 0;
 }
