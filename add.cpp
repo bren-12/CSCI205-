@@ -11,3 +11,17 @@ void addSubstractPrint()
     std::cout << "Number 1 + Number 2 = " << (number1 + number2) << '\n';
     std::cout << "Number 1 - Number 2 = " << (number1 - number2);
 }
+
+int readNumber()
+{
+    int num1{0};
+    std::cout << "Enter number: ";
+    std::cin >> num1;
+    return num1;
+}
+
+void writeAnswer(int num)
+{
+    int numFinal = num;
+    std::cout << "Your Answer = " << numFinal;
+}
