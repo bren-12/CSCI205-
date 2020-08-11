@@ -28,11 +28,13 @@ int main()
     */
     //addSubstractPrint();
     //std::cout << "\n2.11 Redo";
-    int num1 = readNumber();
-    int num2 = readNumber();
-    int numFinal = num1 + num2;
+    //int num1 = readNumber();
+    //int num2 = readNumber();
+    //int numFinal = num1 + num2;
 
-    writeAnswer(numFinal);
+    //writeAnswer(numFinal);
+
+    operateOnNumbers();
 
     return 0;
 }

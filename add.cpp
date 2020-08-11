@@ -1,15 +1,48 @@
 #include <iostream>
 
-void addSubstractPrint()
+void operateOnNumbers()
 {
-    int number1 {1};
-    int number2 {2};
+    double number1 {1};
+    double number2 {2};
+    char operator1 {'a'};
     std::cout << "Enter a number 1" << '\n'; 
     std::cout << "Enter a number 2" << '\n'; 
+    std::cout << "Enter a operator" << '\n'; 
     std::cin >> number1;
     std::cin >> number2;
-    std::cout << "Number 1 + Number 2 = " << (number1 + number2) << '\n';
-    std::cout << "Number 1 - Number 2 = " << (number1 - number2);
+    std::cin >> operator1;
+    
+    //while(operator1 != '+' && operator1 != '-' && operator1 != '*' && operator1 != '/')
+    //{
+    //}
+    if(operator1 != '+' || operator1 != '-' || operator1 != '*' || operator1 != '/')
+    {
+        std::cout << "Please enter a valid operator" << '\n'; 
+        std::cin >> operator1;
+    }
+    
+    if(operator1 == '+')
+    {
+        std::cout << "Number 1 + Number 2 = " << (number1 + number2) << '\n';  
+    }
+
+    else if(operator1 == '*')
+    {
+        std::cout << "Number 1 * Number 2 = " << (number1 * number2) << '\n';  
+    }
+
+    else if(operator1 == '/')
+    {
+        std::cout << "Number 1 / Number 2 = " << (number1 / number2) << '\n';  
+    }
+
+    else if(operator1 == '-')
+    {
+        std::cout << "Number 1 - Number 2 = " << (number1 - number2) << '\n';  
+    }
+
+    //std::cout << "Number 1 * Number 2 = " << (number1 + number2) << '\n';
+    //std::cout << "Number 1 - Number 2 = " << (number1 - number2);
 }
 
 int readNumber()
