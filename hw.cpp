@@ -1,42 +1,61 @@
 #include "add.h"
+//#include "monster.h"
 #include <iostream>
 #include <vector>
 #include <string>
 
 using namespace std;
-
+// Define our different monster types as an enum
+enum class MonsterType
+{
+	ogre,
+	dragon,
+	orc,
+	giant_spider,
+	slime
+};
+ 
+// Our monster struct represents a single monster
+struct Monster
+{
+	MonsterType type;
+	std::string name;
+	int health;
+};
+ 
+// Return the name of the monster's type as a string
+// Since this could be used elsewhere, it's better to make this its own function
+std::string getMonsterTypeString(MonsterType type)
+{
+	if (type == MonsterType::ogre)
+		return "Ogre";
+	else if (type == MonsterType::dragon)
+		return "Dragon";
+	else if (type == MonsterType::orc)
+		return "Orc";
+	else if (type == MonsterType::giant_spider)
+		return "Giant Spider";
+	else if (type == MonsterType::slime)
+		return "Slime";
+ 
+	return "Unknown";
+}
+ 
+// Print our monster's stats
+void printMonster(Monster monster)
+{
+	std::cout << "This " << getMonsterTypeString(monster.type) <<
+		" is named " << monster.name <<
+		" and has " << monster.health << " health.\n";
+}
+ 
 
 int main()
 {
-    /*
-    vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-    
-    for (const string& word : msg)
-    {
-        cout << word << " ";
-    }
-    cout << endl;
-    
-    int number1 {1};
-    int number2 {2};
-    std::cout << "Enter a number 1" << '\n'; 
-    std::cout << "Enter a number 2" << '\n'; 
-    std::cin >> number1;
-    std::cin >> number2;
-    std::cout << "Number 1 + Number 2 = " << (number1 + number2) << '\n';
-    std::cout << "Number 1 - Number 2 = " << (number1 - number2);
-    */
-    //addSubstractPrint();
-    //std::cout << "\n2.11 Redo";
-    //int num1 = readNumber();
-    //int num2 = readNumber();
-    //int numFinal = num1 + num2;
-
-    //writeAnswer(numFinal);
-
-    operateOnNumbers();
-
-    //FINSHED CHAPTER 5
-
+    Monster ogre{ MonsterType::ogre, "Torg", 145 };
+	Monster slime{ MonsterType::slime, "Blurp", 23 };
+ 
+	printMonster(ogre);
+	printMonster(slime);
     return 0;
 }
