@@ -38,6 +38,7 @@ void PrintNames(std::string *arrayOfNames, int length)
     //std::cout << "Name #" << i + 1 << ": " << arrayOfNames[i] << '\n';
 }
 
+/*
 int main()
 {
 	int numberOfNames{GetNumberOfNames()};
@@ -54,3 +55,4 @@ int main()
 
     return 0;
 }
+*/
